@@ -1,0 +1,104 @@
+<!--
+Generated template for the SubscribePage page.
+
+See http://ionicframework.com/docs/components/#navigation for more info on
+Ionic pages and navigation.
+-->
+<ion-header>
+
+<ion-navbar>
+    <ion-title>{{ 'TL_SUBSCRIBE' | translate }}</ion-title>
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-grid>
+
+        <ion-row>
+            <ion-col></ion-col>
+            <ion-col>
+                <form [formGroup]="subscribeForm">
+
+                    <!-- Username -->
+                    <ion-item>
+                        <ion-label floating>{{ 'TL_LOGIN_USERNAME' | translate }} *</ion-label>
+                        <ion-input type="text" formControlName="username"></ion-input>
+                    </ion-item>
+                    <ion-item *ngIf="subscribeForm.get('username').hasError('required') && submitAttempt" no-lines>
+                        <p class="errorText">
+                            {{ 'TL_SUBSCRIBE_USERNAME_ERROR' | translate }}
+                        </p>
+                    </ion-item>
+                    <ion-item *ngIf="subscribeForm.get('username').hasError('minlength') && submitAttempt" no-lines>
+                        <p class="errorText">
+                            {{ 'TL_SUBSCRIBE_USERNAME_LENGTH' | translate }}
+                        </p>
+                    </ion-item>
+                    <!-- end -->
+
+                    <!-- Mail -->
+                    <ion-item>
+                        <ion-label floating>{{ 'TL_SUBSCRIBE_EMAIL' | translate }} *</ion-label>
+                        <ion-input type="text" formControlName="mail"></ion-input>
+                    </ion-item>
+                    <ion-item *ngIf="subscribeForm.get('mail').hasError('required') && submitAttempt" no-lines>
+                        <p class="errorText">
+                            {{ 'TL_SUBSCRIBE_EMAIL_ERROR' | translate }}
+                        </p>
+                    </ion-item>
+                    <ion-item *ngIf="subscribeForm.get('mail').hasError('pattern') && submitAttempt" no-lines>
+                        <p class="errorText">
+                            {{ 'TL_SUBSCRIBE_EMAIL_PATTERN' | translate }}
+                        </p>
+                    </ion-item>
+                    <!-- end -->
+
+                    <!-- Password -->
+                    <ion-item>
+                        <ion-label floating>{{ 'TL_LOGIN_CODE' | translate }} *</ion-label>
+                        <ion-input [type]="pwdType" formControlName="code"></ion-input>
+                        <button ion-button="" icon-only="" clear="" color="default" item-right="" (click)="showHidePassword()"> 
+                            <ion-icon [name]="pwdIcon"></ion-icon>
+                        </button>
+                    </ion-item>
+                    <ion-item *ngIf="subscribeForm.get('code').hasError('required') && submitAttempt" no-lines>
+                        <p class="errorText">
+                            {{ 'TL_SUBSCRIBE_CODE_ERROR' | translate }}
+                        </p>
+                    </ion-item>
+                    <ion-item *ngIf="subscribeForm.get('code').hasError('pattern') && submitAttempt" no-lines>
+                        <p class="errorText">
+                            {{ 'TL_SUBSCRIBE_CODE_PATTERN' | translate }}
+                        </p>
+                    </ion-item>
+                    <!-- end -->
+
+                    <!-- Password confirmation -->
+                    <ion-item>
+                        <ion-label floating>{{ 'TL_SUBSCRIBE_CONFIRM' | translate }} *</ion-label>
+                        <ion-input [type]="pwdType" formControlName="codeCheck"></ion-input>
+                    </ion-item>
+                    <ion-item *ngIf="!subscribeForm.controls.code.valid && submitAttempt" no-lines>
+                        <p class="errorText">
+                            {{ 'TL_SUBSCRIBE_CODE_CONFIRM' | translate }}
+                        </p>
+                    </ion-item>
+                    <ion-item *ngIf="subscribeForm.hasError('mismatchedPasswords') && submitAttempt" no-lines>
+                        <p class="errorText">
+                            {{ 'TL_SUBSCRIBE_CODE_MISMATCH' | translate }}
+                        </p>
+                    </ion-item>
+                    <!-- end -->
+
+                </form>
+
+                <button ion-button full color="primary" (click)="save()">Créer un compte</button>
+                
+            </ion-col>
+            <ion-col>
+            </ion-col>       
+        </ion-row>
+    </ion-grid>
+</ion-content>

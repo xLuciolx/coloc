@@ -1,0 +1,80 @@
+<!--
+    Generated template for the LoginPage page.
+
+    See http://ionicframework.com/docs/components/#navigation for more info on
+    Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{ "TL_LOGIN" | translate }}</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col></ion-col>
+            <ion-col>
+                <ion-item *ngIf="showAlert" color="secondary" text-center>
+                    <p>
+                        {{ 'TL_SUBSCRIBE_VALID' | translate }}
+                    </p>
+                </ion-item>
+            </ion-col>
+            <ion-col></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12 text-center>
+                <div>
+                    <ion-icon class="larger" name="people"></ion-icon>
+                </div>
+                <h1>{{ "TL_LOGIN" | translate }}</h1>
+                <p>{{ "TL_LOGIN_TEXT" | translate }}</p>
+                <p ion-text color="primary">{{ "TL_LOGIN_ACTION" | translate }}</p>
+                <ion-list>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col></ion-col>
+
+                            <ion-col>
+                                <ion-item [(ngModel)]="username">
+                                    <!-- <ion-icon name="md-person"></ion-icon> -->
+                                    <ion-label floating> {{'TL_LOGIN_USERNAME' | translate }} *</ion-label>
+                                    <ion-input type="text" (focus)="focusUsername()" value=""></ion-input>
+                                </ion-item>
+                                <ion-item *ngIf="showErrorUsername">
+                                    <p class='errorText'>{{ "TL_LOGIN_USERNAME_INVALID" | translate }}</p>
+                                </ion-item>
+
+                                <ion-item [(ngModel)]="code">
+                                    <!-- <ion-icon name="md-unlock" item-start></ion-icon> -->
+                                    <ion-label floating>{{'TL_LOGIN_CODE' | translate }} *</ion-label>
+                                    <ion-input type="text" (focus)="focusCode()" value=""></ion-input>
+                                </ion-item>
+                                <ion-item *ngIf="showErrorCode">
+                                    <p class='errorText'>{{ "TL_LOGIN_CODE_INVALID" | translate }}</p>
+                                </ion-item>
+
+                                <button ion-button full (click)="login()">{{ 'TL_LOGIN' | translate }}</button>
+                                <button ion-button full (click)="goToSubscribe()">{{ 'TL_LOGIN_CREATE' | translate }}</button>
+                            </ion-col>
+
+                            <ion-col></ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col></ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+</ion-content>

@@ -1,0 +1,37 @@
+{
+    "TL_WELCOME": "Bienvenue",
+    "TL_LOGIN": "Connexion",
+    "TL_LOGIN_CODE": "Mot de passe",
+    "TL_LOGIN_TEXT": "Texte",
+    "TL_LOGIN_USERNAME": "Identifiant",
+    "TL_LOGIN_ACTION": "Se connecter",
+    "TL_LOGIN_USERNAME_INVALID": "Idendifiant incorrect",
+    "TL_LOGIN_CODE_INVALID": "Mot de passe incorrect",
+    "TL_LOGIN_CREATE": "Créer un compte",
+
+    "TL_SUBSCRIBE": "Inscription",
+    "TL_SUBSCRIBE_CONFIRM": "Confirmez votre mot de passe",
+    "TL_SUBSCRIBE_USERNAME_ERROR": "Veuillez saisir un identifiant",
+    "TL_SUBSCRIBE_USERNAME_LENGTH": "Votre identifiant doit contenir au moins 4 caractères",
+    "TL_SUBSCRIBE_CODE_ERROR": "Veuillez saisir un mot de passe",
+    "TL_SUBSCRIBE_CODE_CONFIRM": "Veuillez confirmer votre mot de passe",
+    "TL_SUBSCRIBE_CODE_MISMATCH": "Les mots de passe doivent correspondre",
+    "TL_SUBSCRIBE_CODE_PATTERN": "Au moins 6 caractètres dont au moins 1 chiffre, 1 minuscule et 1 majuscule",
+    "TL_SUBSCRIBE_EMAIL": "Mail",
+    "TL_SUBSCRIBE_EMAIL_ERROR": "Veuillez saisir une adresse mail",
+    "TL_SUBSCRIBE_EMAIL_PATTERN" : "Veuillez saisir une adresse mail valide",
+    "TL_SUBSCRIBE_VALID": "Votre insciption est validée, vous pouvez désormais vous connecter",
+
+    "TL_ACCOUNT": "Mon compte",
+
+    "TL_TAB_HOME": "Accueil",
+    "TL_TAB_ACCOUNT": "Mon compte",
+
+    "TL_HOME_PROFILE": "Profil complété à ",
+    "TL_HOME_MESSAGES": "Messages",
+    "TL_HOME_MESSAGES_COUNT": "Vous {count, plural, =0{n'} one{} other{}} avez {count, plural, =0{aucun} one{1} other{#}} {count, plural, =0{nouveau message} one{nouveau message} other{nouveaux messages}}",
+    "TL_HOME_CONTACTS": "Contacts",
+    "TL_HOME_LOCATION": "Ville",
+    "TL_HOME_MATCH": "Compatibilité"
+
+}
